@@ -1,18 +1,20 @@
 #include<stdio.h>
 #include<string.h>
-int main()
+#include<conio.h>
+void main()
 {
-char s[50];
-int i,c=0;
+char a[5000];
+int w,count=0;
+  clrscr();
 printf("\n Enter the string");
-gets(s);
-for(i=0;s[i]!=NULL;i++)
+gets(a);
+for(w=0;a[w]!=NULL;w++)
 {
-if((s[i]>='a'&&s[i]<='z')||(s[i]>='A'&&s[i]<='z'))
+if((a[w]>='a'&&a[w]<='z')||(a[w]>='A'&&a[w]<='z'))
 {
-c+=1;
+count=count+1;
 }
 }
-printf("The number of characters u entered were %d",c);
-return 0;
+printf("The number of characters u entered were %d",count);
+getch();
 }

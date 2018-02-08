@@ -1,27 +1,30 @@
 #include <stdio.h>
-int main() {
-int N,i,j,temp;
-printf("enter the number")
-scanf("%d",&N);
-int a[N];
-for(i=1;i<=N;i++)
+
+void main() 
 {
-scanf("%d",&a[i]);	
+int a,k,j,n;
+
+printf("enter the number:");
+scanf("%d",&a);
+int b[a];
+for(k=1;k<=a;k++)
+{
+scanf("%d",&b[k]);	
 }
-for(i=1;i<=N;i++)
+for(k=1;k<=a;k++)
 {
 	
-for(j=i+1;j<=N;j++)
+for(j=k+1;j<=a;j++)
 {
 	
-if(a[i]>a[j])
+if(b[k]>b[j])
 {
-	temp=a[i];
-	a[i]=a[j];
-	a[j]=temp;
+	n=b[k];
+	b[k]=b[j];
+	b[j]=n;
 }
 }
 }
-printf("\n Output\n %d",a[(N/2+1)]);
-return 0;
+printf("\n Output\n %d",b[(a/2+1)]);
+
 }
